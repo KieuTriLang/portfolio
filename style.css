@@ -474,7 +474,8 @@ canvas {
 @media (max-width: 576px) {
   .about-content .introduce p {
     padding: 30px 20px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
+    font-size: 12px;
   }
   .skill-content .skill-type{
     margin: auto;

@@ -47,7 +47,7 @@ export class ProjectComponent implements OnInit, AfterViewInit {
     });
 
     gsap.from('.p1 .description', {
-      x: '50%',
+      x: '-50%',
       opacity: 0,
       duration: 0.75,
       stagger: 0.25,
@@ -59,7 +59,7 @@ export class ProjectComponent implements OnInit, AfterViewInit {
       },
     });
     gsap.from('.p2 .description', {
-      x: '50%',
+      x: '-50%',
       opacity: 0,
       duration: 0.75,
       stagger: 0.25,

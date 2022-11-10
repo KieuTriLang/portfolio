@@ -45,7 +45,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       },
     });
     gsap.from('.left h3', {
-      x: '-100px',
+      x: '100px',
       opacity: 0,
       scrollTrigger: {
         trigger: this.titleEl.nativeElement,
@@ -66,7 +66,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       },
     });
     gsap.from('.right h3', {
-      x: '100px',
+      x: '-100px',
       opacity: 0,
       scrollTrigger: {
         trigger: this.titleEl.nativeElement,

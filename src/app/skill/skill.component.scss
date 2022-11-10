@@ -11,7 +11,7 @@
     & h2 {
       width: fit-content;
       text-align: center;
-      font-size: 5vw;
+      font-size: 2rem;
       text-transform: uppercase;
       font-weight: 700;
       margin: 0 auto 45px auto;
@@ -27,6 +27,7 @@
         & p {
           position: relative;
           padding: 20px 0;
+          font-size: 1rem;
           &:not(:last-of-type)::after {
             position: absolute;
             content: "";

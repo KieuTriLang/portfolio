@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10vw;
+  gap: 5vw;
   z-index: 1;
   box-shadow: 0 1px $color-white;
   & a {
@@ -20,6 +20,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: 1rem;
     &:hover::after {
       width: 100%;
     }

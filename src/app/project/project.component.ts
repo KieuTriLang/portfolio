@@ -99,7 +99,8 @@ export class ProjectComponent implements OnInit, AfterViewInit {
     gsap.from('.p1 .source-code', {
       x: '-50%',
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
+      stagger: 0.25,
       scrollTrigger: {
         trigger: this.titleEl.nativeElement,
         start: 'top 50%',
@@ -110,7 +111,8 @@ export class ProjectComponent implements OnInit, AfterViewInit {
     gsap.from('.p2 .source-code', {
       x: '-50%',
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
+      stagger: 0.25,
       scrollTrigger: {
         trigger: this.titleEl.nativeElement,
         start: 'top 50%',

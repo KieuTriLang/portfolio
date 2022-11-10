@@ -1,0 +1,11 @@
+@use "/src/variable" as *;
+.container {
+  padding-top: 60px;
+  width: 100vw;
+  height: 100vh;
+  background: $color-1;
+  // scroll-snap-type: y mandatory;
+}
+// .ssas {
+//   scroll-snap-align: start;
+// }

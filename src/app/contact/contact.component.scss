@@ -1,0 +1,54 @@
+@use "/src/variable" as *;
+.contact {
+  position: relative;
+  padding: 90px 30px;
+  width: 100%;
+  min-height: 100vh;
+  background: $color-black;
+  color: $color-white;
+
+  & h2 {
+    text-align: center;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+  & .content {
+    display: flex;
+    justify-content: center;
+    & .part {
+      width: 50%;
+      padding: 0 20px;
+      display: flex;
+      flex-flow: column;
+      gap: 15px;
+      &:not(:last-of-type) {
+        border-right: 2px solid $color-white;
+      }
+
+      & h3 {
+        width: fit-content;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 0 25px 0;
+      }
+      &.left {
+        align-items: flex-end;
+        & div {
+          display: flex;
+          gap: 10px;
+        }
+      }
+      &.right {
+        & a {
+          display: flex;
+          gap: 15px;
+          color: $color-white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

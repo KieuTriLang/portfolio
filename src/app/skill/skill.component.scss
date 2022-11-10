@@ -1,0 +1,43 @@
+@use "/src/variable" as *;
+.skill {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: $color-black;
+  color: $color-white;
+
+  & .content {
+    padding: 90px 30px;
+    & h2 {
+      width: fit-content;
+      text-align: center;
+      font-size: 5vw;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 0 auto 45px auto;
+    }
+    & .skill-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+      justify-content: center;
+      gap: 60px;
+      & .skill-item {
+        text-align: center;
+        text-transform: uppercase;
+        & p {
+          position: relative;
+          padding: 20px 0;
+          &:not(:last-of-type)::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: $color-white;
+          }
+        }
+      }
+    }
+  }
+}

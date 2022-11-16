@@ -5,6 +5,7 @@ import {
   ViewChild,
   ElementRef,
 } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';

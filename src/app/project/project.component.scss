@@ -19,6 +19,7 @@
     justify-content: center;
     gap: 40px;
     & .card {
+      min-height: 350px;
       padding: 20px;
       border: 2px solid $color-white;
       display: flex;

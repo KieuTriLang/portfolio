@@ -34,7 +34,7 @@ export class SkillComponent implements OnInit, AfterViewInit {
     gsap.from('.skill-list p', {
       scale: 1.2,
       opacity: 0,
-      delay: 0.5,
+      delay: 0.25,
       duration: 0.75,
       stagger: 0.15,
       scrollTrigger: {

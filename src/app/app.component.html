@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container" [class.active]="IsOpenedAvatar">
+  <fa-icon [icon]="icon" [size]="'1x'" class="icon" (click)="IsOpenedAvatar = !IsOpenedAvatar"></fa-icon>
   <!-- <app-navbar></app-navbar> -->
   <app-overview id="overview"></app-overview>
   <app-skill id="skill"></app-skill>

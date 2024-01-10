@@ -58,33 +58,8 @@ export class ProjectComponent implements OnInit, AfterViewInit {
         toggleActions: 'restart none reverse none',
       },
     });
-    gsap.from('.p2 .description', {
-      x: '-50%',
-      opacity: 0,
-      duration: 0.75,
-      stagger: 0.25,
-      scrollTrigger: {
-        trigger: this.titleEl.nativeElement,
-        start: 'top 50%',
-        end: 'top 50%',
-        toggleActions: 'restart none reverse none',
-      },
-    });
     gsap.from('.p1 span', {
       scale: 0.5,
-      opacity: 0,
-      delay: 0.5,
-      duration: 0.75,
-      stagger: 0.15,
-      scrollTrigger: {
-        trigger: this.titleEl.nativeElement,
-        start: 'top 50%',
-        end: 'top 50%',
-        toggleActions: 'restart none reverse none',
-      },
-    });
-    gsap.from('.p2 span', {
-      scale: 1.2,
       opacity: 0,
       delay: 0.5,
       duration: 0.75,
@@ -108,7 +83,73 @@ export class ProjectComponent implements OnInit, AfterViewInit {
         toggleActions: 'restart none reverse none',
       },
     });
+    gsap.from('.p2 .description', {
+      x: '-50%',
+      opacity: 0,
+      duration: 0.75,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: this.titleEl.nativeElement,
+        start: 'top 50%',
+        end: 'top 50%',
+        toggleActions: 'restart none reverse none',
+      },
+    });
+    
+    gsap.from('.p2 span', {
+      scale: 1.2,
+      opacity: 0,
+      delay: 0.5,
+      duration: 0.75,
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: this.titleEl.nativeElement,
+        start: 'top 50%',
+        end: 'top 50%',
+        toggleActions: 'restart none reverse none',
+      },
+    });
+    
     gsap.from('.p2 .source-code', {
+      x: '-50%',
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: this.titleEl.nativeElement,
+        start: 'top 50%',
+        end: 'top 50%',
+        toggleActions: 'restart none reverse none',
+      },
+    });
+    gsap.from('.p3 .description', {
+      x: '-50%',
+      opacity: 0,
+      duration: 0.75,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: this.titleEl.nativeElement,
+        start: 'top 50%',
+        end: 'top 50%',
+        toggleActions: 'restart none reverse none',
+      },
+    });
+    
+    gsap.from('.p3 span', {
+      scale: 1.2,
+      opacity: 0,
+      delay: 0.5,
+      duration: 0.75,
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: this.titleEl.nativeElement,
+        start: 'top 50%',
+        end: 'top 50%',
+        toggleActions: 'restart none reverse none',
+      },
+    });
+    
+    gsap.from('.p3 .source-code', {
       x: '-50%',
       opacity: 0,
       duration: 0.5,

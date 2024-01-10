@@ -1,4 +1,5 @@
 @use "/src/variable" as *;
+@use "/src/responsive" as *;
 .project {
   position: relative;
   padding: 90px 30px;
@@ -14,77 +15,107 @@
     margin-bottom: 60px;
   }
   & .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-    justify-content: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     gap: 40px;
     & .card {
+      max-width: 85vw;
       min-height: 350px;
       padding: 20px;
-      border: 2px solid $color-white;
-      display: flex;
-      flex-flow: column;
-      gap: 15px;
-      & .header {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      border: 1px solid $color-white;
+      @include Responsive(LG) {
+        width: 60vw;
         display: flex;
-        align-items: center;
-        font-size: 1.6rem;
-        gap: 15px;
+        flex-flow: column;
+        gap: 50px;
       }
-      & .description {
-        flex: 1 1 auto;
-        position: relative;
-        font-size: 0.875rem;
-        line-height: 1.4rem;
-        overflow: hidden;
-        &:hover .feature-list {
-          opacity: 1;
-        }
-        & .feature-list {
-          // display: grid;
-          // grid-template-columns: 1fr 1fr;
-          font-size: 0.75rem;
-          position: absolute;
-          inset: 0 0 0 0;
-          background: $color-black;
-          opacity: 0;
-          transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
-        }
-      }
-      & .tags {
-        margin-top: auto;
+      @include Responsive(MD) {
+        width: 85vw;
         display: flex;
-        flex-flow: row wrap;
-        gap: 10px;
-        & span {
-          font-size: 0.5rem;
-          padding: 5px 10px;
-          border: 1px solid $color-white;
-        }
+        flex-flow: column;
+        gap: 50px;
       }
-      & .source-code {
+      & .info {
         display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        gap: 15px;
-        & a {
-          font-size: 2rem;
-          text-decoration: none;
-          color: $color-white;
-          padding: 8px 16px;
-          width: fit-content;
-          border: 1px solid $color-white;
+        flex-flow: column;
+        gap: 20px;
+        .header {
           display: flex;
           align-items: center;
+          font-size: 1.6rem;
           gap: 15px;
-          box-shadow: inset 0 0 $color-white;
-          transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s;
-          & small {
-            font-size: 0.875rem;
+        }
+        .description {
+          font-size: 0.875rem;
+        line-height: 1.4rem;
+        }
+        .tags {
+          margin-top: auto;
+          display: flex;
+          flex-flow: row wrap;
+          gap: 10px;
+          span {
+            font-size: 0.5rem;
+            padding: 5px 10px;
+            border: 1px solid $color-white;
           }
-          &:hover {
-            box-shadow: inset 150px 0 $color-white;
-            color: $color-black;
+        }
+        .source-code {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          gap: 15px;
+          & a {
+            font-size: 2rem;
+            text-decoration: none;
+            color: $color-white;
+            padding: 8px 16px;
+            width: fit-content;
+            border: 1px solid $color-white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: inset 0 0 $color-white;
+            transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s;
+            & small {
+              font-size: 0.875rem;
+            }
+            &:hover {
+              box-shadow: inset 150px 0 $color-white;
+              color: $color-black;
+            }
+          }
+          & button{
+            text-decoration: none;
+            color: $color-white;
+            background-color: $color-black;
+            padding: 8px 16px;
+            width: fit-content;
+            border: 1px solid $color-white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: inset 0 0 $color-white;
+            transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s;
+            & small {
+              font-size: 0.875rem;
+            }
+            &:hover {
+              box-shadow: inset 150px 0 $color-white;
+              color: $color-black;
+            }
+          }
+        }
+      }
+      .video {
+        iframe {
+          height: 100%;
+          aspect-ratio: 16/9;
+          @include Responsive(LG) {
+            width: 100%;
           }
         }
       }

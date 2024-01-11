@@ -50,7 +50,9 @@
         }
         .description {
           font-size: 0.875rem;
-        line-height: 1.4rem;
+          line-height: 1.4rem;
+          list-style-type: circle;
+          padding: 0 0 0 20px;
         }
         .tags {
           margin-top: auto;
